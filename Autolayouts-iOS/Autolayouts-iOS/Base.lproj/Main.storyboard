@@ -18,20 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmC-py-TeJ">
-                                <rect key="frame" x="487" y="541" width="55" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button3"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHc-lp-Blv">
-                                <rect key="frame" x="273" y="541" width="55" height="30"/>
+                                <rect key="frame" x="232" y="541" width="136" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button2"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBH-OI-mZK">
-                                <rect key="frame" x="58" y="541" width="55" height="30"/>
+                                <rect key="frame" x="58" y="541" width="136" height="30"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmC-py-TeJ">
+                                <rect key="frame" x="406" y="541" width="136" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button3"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -41,9 +41,11 @@
                             <constraint firstItem="pBH-OI-mZK" firstAttribute="bottom" secondItem="iHc-lp-Blv" secondAttribute="bottom" id="Gfq-R4-j1y"/>
                             <constraint firstItem="CmC-py-TeJ" firstAttribute="bottom" secondItem="iHc-lp-Blv" secondAttribute="bottom" id="JKI-gi-6I1"/>
                             <constraint firstItem="pBH-OI-mZK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="JLv-dc-BcH"/>
+                            <constraint firstItem="CmC-py-TeJ" firstAttribute="leading" secondItem="iHc-lp-Blv" secondAttribute="trailing" constant="38" id="RWv-Wb-kSL"/>
                             <constraint firstItem="CmC-py-TeJ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-38" id="UYK-YE-6iT"/>
                             <constraint firstItem="iHc-lp-Blv" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-29" id="YZI-Fb-6iv"/>
                             <constraint firstItem="iHc-lp-Blv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b7R-zk-nFt"/>
+                            <constraint firstItem="iHc-lp-Blv" firstAttribute="leading" secondItem="pBH-OI-mZK" secondAttribute="trailing" constant="38" id="uOB-hv-4HJ"/>
                             <constraint firstItem="CmC-py-TeJ" firstAttribute="width" secondItem="iHc-lp-Blv" secondAttribute="width" id="uiu-55-hjO"/>
                             <constraint firstItem="iHc-lp-Blv" firstAttribute="width" secondItem="pBH-OI-mZK" secondAttribute="width" id="wlY-t7-kBB"/>
                         </constraints>
