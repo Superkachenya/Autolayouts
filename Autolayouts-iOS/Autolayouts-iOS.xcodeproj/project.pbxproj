@@ -15,6 +15,8 @@
 		8EA496911C6A367B005B628C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA4968F1C6A367B005B628C /* LaunchScreen.storyboard */; };
 		8EA4969C1C6A367B005B628C /* Autolayouts_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4969B1C6A367B005B628C /* Autolayouts_iOSTests.m */; };
 		8EA496A71C6A367B005B628C /* Autolayouts_iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA496A61C6A367B005B628C /* Autolayouts_iOSUITests.m */; };
+		8ED9B53F1C6B39380057C910 /* ALStoryboardlessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9B53E1C6B39380057C910 /* ALStoryboardlessViewController.m */; };
+		8ED9B5431C6BA29A0057C910 /* ALSizeClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9B5421C6BA29A0057C910 /* ALSizeClassesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		8EA496A21C6A367B005B628C /* Autolayouts-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Autolayouts-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA496A61C6A367B005B628C /* Autolayouts_iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Autolayouts_iOSUITests.m; sourceTree = "<group>"; };
 		8EA496A81C6A367B005B628C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ED9B53D1C6B39380057C910 /* ALStoryboardlessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALStoryboardlessViewController.h; path = ProgrammaticallyViewController/ALStoryboardlessViewController.h; sourceTree = "<group>"; };
+		8ED9B53E1C6B39380057C910 /* ALStoryboardlessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALStoryboardlessViewController.m; path = ProgrammaticallyViewController/ALStoryboardlessViewController.m; sourceTree = "<group>"; };
+		8ED9B5411C6BA2990057C910 /* ALSizeClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALSizeClassesViewController.h; path = SizeClasses/ALSizeClassesViewController.h; sourceTree = "<group>"; };
+		8ED9B5421C6BA29A0057C910 /* ALSizeClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALSizeClassesViewController.m; path = SizeClasses/ALSizeClassesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,8 @@
 				8EA496851C6A367B005B628C /* AppDelegate.m */,
 				8EA496871C6A367B005B628C /* ViewController.h */,
 				8EA496881C6A367B005B628C /* ViewController.m */,
+				8ED9B5441C6BA29D0057C910 /* SizeClasses */,
+				8ED9B5401C6BA2450057C910 /* ProgrammaticallyConstraints */,
 				8EA4968A1C6A367B005B628C /* Main.storyboard */,
 				8EA4968D1C6A367B005B628C /* Assets.xcassets */,
 				8EA4968F1C6A367B005B628C /* LaunchScreen.storyboard */,
@@ -138,6 +146,24 @@
 				8EA496A81C6A367B005B628C /* Info.plist */,
 			);
 			path = "Autolayouts-iOSUITests";
+			sourceTree = "<group>";
+		};
+		8ED9B5401C6BA2450057C910 /* ProgrammaticallyConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				8ED9B53D1C6B39380057C910 /* ALStoryboardlessViewController.h */,
+				8ED9B53E1C6B39380057C910 /* ALStoryboardlessViewController.m */,
+			);
+			name = ProgrammaticallyConstraints;
+			sourceTree = "<group>";
+		};
+		8ED9B5441C6BA29D0057C910 /* SizeClasses */ = {
+			isa = PBXGroup;
+			children = (
+				8ED9B5411C6BA2990057C910 /* ALSizeClassesViewController.h */,
+				8ED9B5421C6BA29A0057C910 /* ALSizeClassesViewController.m */,
+			);
+			name = SizeClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +298,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EA496891C6A367B005B628C /* ViewController.m in Sources */,
+				8ED9B53F1C6B39380057C910 /* ALStoryboardlessViewController.m in Sources */,
+				8ED9B5431C6BA29A0057C910 /* ALSizeClassesViewController.m in Sources */,
 				8EA496861C6A367B005B628C /* AppDelegate.m in Sources */,
 				8EA496831C6A367B005B628C /* main.m in Sources */,
 			);
@@ -416,6 +444,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cleveroad.Autolayouts-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -427,6 +456,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cleveroad.Autolayouts-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -497,6 +527,7 @@
 				8EA496AD1C6A367B005B628C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EA496AE1C6A367B005B628C /* Build configuration list for PBXNativeTarget "Autolayouts-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +536,7 @@
 				8EA496B01C6A367B005B628C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EA496B11C6A367B005B628C /* Build configuration list for PBXNativeTarget "Autolayouts-iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +545,7 @@
 				8EA496B31C6A367B005B628C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
