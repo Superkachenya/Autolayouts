@@ -9,8 +9,14 @@
 #import "ALSimpleViewController.h"
 
 @interface ALSimpleViewController ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *userPhoto;
 @property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic)  NSLayoutConstraint *originalBottomConstraint;
+@property (assign, nonatomic) NSInteger bottomConstant;
+
 
 @end
 
@@ -22,23 +28,33 @@
     self.userPhoto.clipsToBounds = YES;
     self.userPhoto.layer.borderWidth = 3.0f;
     self.userPhoto.layer.borderColor = [UIColor orangeColor].CGColor;
+    self.bottomConstant = self.bottomConstraint.constant;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(getUpUserElements:)
-                                                 name:UIKeyboardDidShowNotification
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardWillShowNotification
                                                object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIKeyboardDidShowNotification
+                                                    name:UIKeyboardWillShowNotification
                                                   object:nil];
-}
-
-- (void)getUpUserElements:(NSNotification *)notification {
-    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillHideNotification
+                                                  object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,6 +62,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.textField resignFirstResponder];
+    return YES;
+}
+
+- (void)keyboardWasShown:(NSNotification *)notification {
+    NSDictionary *userInfo = notification.userInfo;
+    CGSize kbSize = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    self.bottomConstraint.constant = kbSize.height;
+}
+
+- (void)keyboardWillBeHidden:(NSNotification *)notification {
+    self.bottomConstraint.constant = self.bottomConstant;
+
+}
+
+-(void)dismissKeyboard {
+    [self.textField resignFirstResponder];
+}
 /*
 #pragma mark - Navigation
 
