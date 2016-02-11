@@ -358,7 +358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEp-ie-TYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077" y="1198.5"/>
+            <point key="canvasLocation" x="76" y="1143"/>
         </scene>
         <!--AutoLayout-->
         <scene sceneID="BsK-Oc-KId">
@@ -391,11 +391,71 @@
                     <connections>
                         <segue destination="Jcb-ex-7jI" kind="relationship" relationship="viewControllers" id="jp6-h3-l7q"/>
                         <segue destination="fga-xf-GKa" kind="relationship" relationship="viewControllers" id="apD-54-ydM"/>
+                        <segue destination="lyS-Na-o3o" kind="relationship" relationship="viewControllers" id="Am2-3c-ZbJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmx-f0-U7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="301" y="387"/>
         </scene>
+        <!--Simple View-->
+        <scene sceneID="q04-aI-niA">
+            <objects>
+                <viewController id="lyS-Na-o3o" customClass="ALSimpleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bqI-Zp-KFH"/>
+                        <viewControllerLayoutGuide type="bottom" id="0L0-lk-wu1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TRK-ya-qwh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jyJ-b8-IrX">
+                                <rect key="frame" x="200" y="501" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="sg4-as-Vah">
+                                <rect key="frame" x="225" y="301" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="qUQ-XQ-c58"/>
+                                    <constraint firstAttribute="height" constant="150" id="twf-Yo-uod"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qre-Fe-dmK">
+                                <rect key="frame" x="200" y="461" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Ces-xo-43m"/>
+                                    <constraint firstAttribute="height" constant="30" id="yPD-Rv-bXE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sg4-as-Vah" firstAttribute="centerX" secondItem="TRK-ya-qwh" secondAttribute="centerX" id="5bN-GE-zbF"/>
+                            <constraint firstItem="Qre-Fe-dmK" firstAttribute="trailing" secondItem="jyJ-b8-IrX" secondAttribute="trailing" id="GwB-GM-YWX"/>
+                            <constraint firstItem="sg4-as-Vah" firstAttribute="centerX" secondItem="Qre-Fe-dmK" secondAttribute="centerX" id="VGc-n3-a84"/>
+                            <constraint firstItem="jyJ-b8-IrX" firstAttribute="top" secondItem="Qre-Fe-dmK" secondAttribute="bottom" constant="10" id="Wsn-HF-ws7"/>
+                            <constraint firstItem="Qre-Fe-dmK" firstAttribute="top" secondItem="sg4-as-Vah" secondAttribute="bottom" constant="10" id="dcJ-J9-sEM"/>
+                            <constraint firstItem="0L0-lk-wu1" firstAttribute="top" secondItem="jyJ-b8-IrX" secondAttribute="bottom" constant="20" id="sG7-KQ-eUs"/>
+                            <constraint firstItem="Qre-Fe-dmK" firstAttribute="leading" secondItem="jyJ-b8-IrX" secondAttribute="leading" id="x74-2o-qhg"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Simple View" id="P0R-tG-EEN"/>
+                    <connections>
+                        <outlet property="userName" destination="Qre-Fe-dmK" id="oyH-0B-c8c"/>
+                        <outlet property="userPhoto" destination="sg4-as-Vah" id="WdO-r9-hEo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E7o-VM-jau" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="766" y="1143"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="photo" width="933" height="933"/>
+    </resources>
 </document>

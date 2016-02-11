@@ -15,6 +15,7 @@
 		8EA496911C6A367B005B628C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA4968F1C6A367B005B628C /* LaunchScreen.storyboard */; };
 		8EA4969C1C6A367B005B628C /* Autolayouts_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4969B1C6A367B005B628C /* Autolayouts_iOSTests.m */; };
 		8EA496A71C6A367B005B628C /* Autolayouts_iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA496A61C6A367B005B628C /* Autolayouts_iOSUITests.m */; };
+		8EA7D96B1C6CAF1D004CF163 /* ALSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA7D96A1C6CAF1D004CF163 /* ALSimpleViewController.m */; };
 		8ED9B53F1C6B39380057C910 /* ALStoryboardlessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9B53E1C6B39380057C910 /* ALStoryboardlessViewController.m */; };
 		8ED9B5431C6BA29A0057C910 /* ALSizeClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9B5421C6BA29A0057C910 /* ALSizeClassesViewController.m */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,8 @@
 		8EA496A21C6A367B005B628C /* Autolayouts-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Autolayouts-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA496A61C6A367B005B628C /* Autolayouts_iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Autolayouts_iOSUITests.m; sourceTree = "<group>"; };
 		8EA496A81C6A367B005B628C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EA7D9691C6CAF1D004CF163 /* ALSimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALSimpleViewController.h; path = ALSimpleViewController/ALSimpleViewController.h; sourceTree = "<group>"; };
+		8EA7D96A1C6CAF1D004CF163 /* ALSimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALSimpleViewController.m; path = ALSimpleViewController/ALSimpleViewController.m; sourceTree = "<group>"; };
 		8ED9B53D1C6B39380057C910 /* ALStoryboardlessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALStoryboardlessViewController.h; path = ProgrammaticallyViewController/ALStoryboardlessViewController.h; sourceTree = "<group>"; };
 		8ED9B53E1C6B39380057C910 /* ALStoryboardlessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALStoryboardlessViewController.m; path = ProgrammaticallyViewController/ALStoryboardlessViewController.m; sourceTree = "<group>"; };
 		8ED9B5411C6BA2990057C910 /* ALSizeClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALSizeClassesViewController.h; path = SizeClasses/ALSizeClassesViewController.h; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 				8EA496851C6A367B005B628C /* AppDelegate.m */,
 				8EA496871C6A367B005B628C /* ViewController.h */,
 				8EA496881C6A367B005B628C /* ViewController.m */,
+				8EA7D96C1C6CAF25004CF163 /* SimpleView */,
 				8ED9B5441C6BA29D0057C910 /* SizeClasses */,
 				8ED9B5401C6BA2450057C910 /* ProgrammaticallyConstraints */,
 				8EA4968A1C6A367B005B628C /* Main.storyboard */,
@@ -146,6 +150,15 @@
 				8EA496A81C6A367B005B628C /* Info.plist */,
 			);
 			path = "Autolayouts-iOSUITests";
+			sourceTree = "<group>";
+		};
+		8EA7D96C1C6CAF25004CF163 /* SimpleView */ = {
+			isa = PBXGroup;
+			children = (
+				8EA7D9691C6CAF1D004CF163 /* ALSimpleViewController.h */,
+				8EA7D96A1C6CAF1D004CF163 /* ALSimpleViewController.m */,
+			);
+			name = SimpleView;
 			sourceTree = "<group>";
 		};
 		8ED9B5401C6BA2450057C910 /* ProgrammaticallyConstraints */ = {
@@ -300,6 +313,7 @@
 				8EA496891C6A367B005B628C /* ViewController.m in Sources */,
 				8ED9B53F1C6B39380057C910 /* ALStoryboardlessViewController.m in Sources */,
 				8ED9B5431C6BA29A0057C910 /* ALSizeClassesViewController.m in Sources */,
+				8EA7D96B1C6CAF1D004CF163 /* ALSimpleViewController.m in Sources */,
 				8EA496861C6A367B005B628C /* AppDelegate.m in Sources */,
 				8EA496831C6A367B005B628C /* main.m in Sources */,
 			);
