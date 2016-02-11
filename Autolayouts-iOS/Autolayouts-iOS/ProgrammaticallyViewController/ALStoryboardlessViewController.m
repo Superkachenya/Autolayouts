@@ -10,13 +10,37 @@
 
 @interface ALStoryboardlessViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *emptyViewFirst;
+@property (weak, nonatomic) IBOutlet UIView *emptyViewSecond;
+@property (weak, nonatomic) IBOutlet UIView *emptyViewThird;
+@property (weak, nonatomic) IBOutlet UIButton *buttonFirst;
+@property (weak, nonatomic) IBOutlet UIButton *buttonSecond;
+
 @end
 
 @implementation ALStoryboardlessViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.view removeConstraints:self.view.constraints];
+    [self.emptyViewFirst removeConstraints:self.emptyViewFirst.constraints];
+    NSLayoutConstraint *emptyViewFirstLeading = [NSLayoutConstraint constraintWithItem:self.emptyViewFirst
+                                                                             attribute:NSLayoutAttributeLeading
+                                                                             relatedBy:NSLayoutRelationEqual
+                                                                                toItem:self.view
+                                                                             attribute:NSLayoutAttributeLeading
+                                                                            multiplier:1.0
+                                                                              constant:20];
+    NSLayoutConstraint *emptyViewFirstBottom = [NSLayoutConstraint constraintWithItem:self.emptyViewFirst
+                                                                             attribute:NSLayoutAttributeBottom
+                                                                             relatedBy:NSLayoutRelationEqual
+                                                                                toItem:self.bottomLayoutGuide
+                                                                             attribute:NSLayoutAttributeTop
+                                                                            multiplier:1.0
+                                                                              constant:20];
+    [self.view addConstraint:emptyViewFirstLeading];
+    [self.view addConstraint:emptyViewFirstBottom];
+
 }
 
 - (void)didReceiveMemoryWarning {
