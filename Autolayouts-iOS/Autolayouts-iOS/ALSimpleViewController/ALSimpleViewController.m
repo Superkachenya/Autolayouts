@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *userName;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-@property (weak, nonatomic)  NSLayoutConstraint *originalBottomConstraint;
 @property (assign, nonatomic) NSInteger bottomConstant;
 
 
