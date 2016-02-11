@@ -32,7 +32,6 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
-    
     [self.view addGestureRecognizer:tap];
 }
 
@@ -45,7 +44,6 @@
                                              selector:@selector(keyboardWillBeHidden:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
-
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -59,7 +57,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -70,12 +67,11 @@
 - (void)keyboardWasShown:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     CGSize kbSize = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    self.bottomConstraint.constant = kbSize.height;
+    self.bottomConstraint.constant = kbSize.height - self.bottomConstant;
 }
 
 - (void)keyboardWillBeHidden:(NSNotification *)notification {
     self.bottomConstraint.constant = self.bottomConstant;
-
 }
 
 -(void)dismissKeyboard {
