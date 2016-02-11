@@ -109,55 +109,8 @@
                     <view key="view" contentMode="scaleToFill" id="GNS-dA-noL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="htS-oJ-Uxa">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fv-9X-KQf">
-                                <rect key="frame" x="425" y="464" width="100" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button3"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBI-jt-MJt">
-                                <rect key="frame" x="75" y="464" width="100" height="50"/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button1"/>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Vp-aG-iry" userLabel="View1">
-                                <rect key="frame" x="0.0" y="464" width="75" height="50"/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D5T-Iy-AVJ" userLabel="View2">
-                                <rect key="frame" x="175" y="464" width="75" height="50"/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ibK-cp-Zmh" userLabel="View3">
-                                <rect key="frame" x="350" y="464" width="75" height="50"/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PBQ-oE-Ih3" userLabel="View4">
-                                <rect key="frame" x="525" y="464" width="75" height="50"/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylR-MW-OhP">
-                                <rect key="frame" x="250" y="464" width="100" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button2"/>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="baseView" destination="htS-oJ-Uxa" id="vdY-y5-UXt"/>
-                        <outlet property="emptyView1" destination="9Vp-aG-iry" id="QbC-HV-oXS"/>
-                        <outlet property="emptyView2" destination="D5T-Iy-AVJ" id="NnJ-qP-8Ca"/>
-                        <outlet property="emptyView3" destination="ibK-cp-Zmh" id="zRs-h8-v7s"/>
-                        <outlet property="emptyView4" destination="PBQ-oE-Ih3" id="ydr-r1-L1J"/>
-                        <outlet property="firstButton" destination="QBI-jt-MJt" id="fcD-kD-7Kq"/>
-                        <outlet property="secondButton" destination="ylR-MW-OhP" id="L8j-8h-BAY"/>
-                        <outlet property="thirdButton" destination="9Fv-9X-KQf" id="1Dn-ct-c4u"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJ4-fD-mFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

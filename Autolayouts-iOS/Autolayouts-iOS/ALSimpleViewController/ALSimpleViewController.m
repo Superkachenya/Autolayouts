@@ -8,14 +8,13 @@
 
 #import "ALSimpleViewController.h"
 
-@interface ALSimpleViewController ()
+@interface ALSimpleViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *userPhoto;
 @property (weak, nonatomic) IBOutlet UILabel *userName;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (assign, nonatomic) NSInteger bottomConstant;
-
 
 @end
 
@@ -28,6 +27,7 @@
     self.userPhoto.layer.borderWidth = 3.0f;
     self.userPhoto.layer.borderColor = [UIColor orangeColor].CGColor;
     self.bottomConstant = self.bottomConstraint.constant;
+    self.textField.delegate = self;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
