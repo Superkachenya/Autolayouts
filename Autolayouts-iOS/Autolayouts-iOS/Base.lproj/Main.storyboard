@@ -415,7 +415,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="sg4-as-Vah">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coolCat" translatesAutoresizingMaskIntoConstraints="NO" id="sg4-as-Vah">
                                 <rect key="frame" x="225" y="301" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="qUQ-XQ-c58"/>
@@ -456,6 +456,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="photo" width="933" height="933"/>
+        <image name="coolCat" width="440" height="439"/>
     </resources>
 </document>

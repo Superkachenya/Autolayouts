@@ -18,11 +18,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   // self.userPhoto.image = [UIImage imageNamed:@"photo"];
     self.userPhoto.layer.cornerRadius = self.userPhoto.frame.size.width / 2;
     self.userPhoto.clipsToBounds = YES;
     self.userPhoto.layer.borderWidth = 3.0f;
     self.userPhoto.layer.borderColor = [UIColor orangeColor].CGColor;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(getUpUserElements:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardDidShowNotification
+                                                  object:nil];
+}
+
+- (void)getUpUserElements:(NSNotification *)notification {
+    
 }
 
 - (void)didReceiveMemoryWarning {
