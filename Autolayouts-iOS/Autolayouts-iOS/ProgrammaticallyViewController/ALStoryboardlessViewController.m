@@ -10,6 +10,7 @@
 
 @interface ALStoryboardlessViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *baseView;
 @property (weak, nonatomic) IBOutlet UIButton *firstButton;
 @property (weak, nonatomic) IBOutlet UIButton *secondButton;
 @property (weak, nonatomic) IBOutlet UIButton *thirdButton;
@@ -24,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.baseView.translatesAutoresizingMaskIntoConstraints = NO;
     self.firstButton.translatesAutoresizingMaskIntoConstraints = NO;
     self.secondButton.translatesAutoresizingMaskIntoConstraints = NO;
     self.thirdButton.translatesAutoresizingMaskIntoConstraints = NO;
@@ -31,6 +33,9 @@
     self.emptyView2.translatesAutoresizingMaskIntoConstraints = NO;
     self.emptyView3.translatesAutoresizingMaskIntoConstraints = NO;
     self.emptyView4.translatesAutoresizingMaskIntoConstraints = NO;
+    
+#pragma mark - button constraints
+    
     [self.firstButton addConstraint:[NSLayoutConstraint constraintWithItem:self.firstButton
                                                                  attribute:NSLayoutAttributeHeight
                                                                  relatedBy:NSLayoutRelationEqual
@@ -45,7 +50,14 @@
                                                                  attribute:0
                                                                 multiplier:0
                                                                   constant:100]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.baseView
+                                                          attribute:NSLayoutAttributeLeading
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeLeading
+                                                         multiplier:1
+                                                           constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.baseView
                                                           attribute:NSLayoutAttributeLeading
                                                           relatedBy:NSLayoutRelationEqual
                                                              toItem:self.emptyView1
@@ -102,9 +114,9 @@
                                                           attribute:NSLayoutAttributeTrailing
                                                          multiplier:1
                                                            constant:0]];
-    
 #pragma mark - broken Center
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view
+
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.baseView
                                                           attribute:NSLayoutAttributeCenterX
                                                           relatedBy:NSLayoutRelationEqual
                                                              toItem:self.secondButton
@@ -142,13 +154,13 @@
                                                            constant:0]];
     
 #pragma mark - broken Bottom
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.bottomLayoutGuide
-                                                          attribute:NSLayoutAttributeTop
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.baseView
+                                                          attribute:NSLayoutAttributeBottom
                                                           relatedBy:NSLayoutRelationEqual
                                                              toItem:self.secondButton
                                                           attribute:NSLayoutAttributeBottom
                                                          multiplier:1
-                                                           constant:-37]];
+                                                           constant:37]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.emptyView3
                                                           attribute:NSLayoutAttributeBottom
                                                           relatedBy:NSLayoutRelationEqual
@@ -213,7 +225,7 @@
                                                          multiplier:1
                                                            constant:0]];
 #pragma mark - broken trailing
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.baseView
                                                           attribute:NSLayoutAttributeTrailing
                                                           relatedBy:NSLayoutRelationEqual
                                                              toItem:self.emptyView4
