@@ -40,21 +40,21 @@
                                                                                toItem:self.view
                                                                             attribute:NSLayoutAttributeBottom
                                                                            multiplier:1.0
-                                                                             constant:0];
+                                                                             constant:-20];
     NSLayoutConstraint *emptyViewFirstHeigt = [NSLayoutConstraint constraintWithItem:self.emptyView1
                                                                            attribute:NSLayoutAttributeHeight
                                                                            relatedBy:NSLayoutRelationEqual
-                                                                              toItem:nil
-                                                                           attribute:0
+                                                                              toItem:self.button1
+                                                                           attribute:NSLayoutAttributeHeight
                                                                           multiplier:1.0
-                                                                            constant:50];
+                                                                            constant:0];
     NSLayoutConstraint *emptyViewFirstWidth = [NSLayoutConstraint constraintWithItem:self.emptyView1
                                                                            attribute:NSLayoutAttributeWidth
                                                                            relatedBy:NSLayoutRelationEqual
-                                                                              toItem:nil
-                                                                           attribute:0
+                                                                              toItem:self.emptyView2
+                                                                           attribute:NSLayoutAttributeWidth
                                                                           multiplier:1.0
-                                                                            constant:100];
+                                                                            constant:0];
     [self.view addConstraints:@[emptyViewFirstLeading,
                                 emptyViewFirstBottom,
                                 emptyViewFirstHeigt,
@@ -69,7 +69,7 @@
     NSLayoutConstraint *buttonFirstBottom = [NSLayoutConstraint constraintWithItem:self.button1
                                                                          attribute:NSLayoutAttributeBottom
                                                                          relatedBy:NSLayoutRelationEqual
-                                                                            toItem:self.view
+                                                                            toItem:self.emptyView1
                                                                          attribute:NSLayoutAttributeBottom
                                                                         multiplier:1.0
                                                                           constant:0];
@@ -99,7 +99,7 @@
     NSLayoutConstraint *emptyViewSecondBottom = [NSLayoutConstraint constraintWithItem:self.emptyView2
                                                                             attribute:NSLayoutAttributeBottom
                                                                             relatedBy:NSLayoutRelationEqual
-                                                                               toItem:self.view
+                                                                               toItem:self.emptyView1
                                                                             attribute:NSLayoutAttributeBottom
                                                                            multiplier:1.0
                                                                              constant:0];
@@ -131,7 +131,7 @@
     NSLayoutConstraint *buttonSecondBottom = [NSLayoutConstraint constraintWithItem:self.button2
                                                                          attribute:NSLayoutAttributeBottom
                                                                          relatedBy:NSLayoutRelationEqual
-                                                                            toItem:self.view
+                                                                            toItem:self.emptyView1
                                                                          attribute:NSLayoutAttributeBottom
                                                                         multiplier:1.0
                                                                           constant:0];
@@ -160,10 +160,17 @@
                                                                           attribute:NSLayoutAttributeTrailing
                                                                          multiplier:1.0
                                                                            constant:0];
-    NSLayoutConstraint *emptyViewThirdBottom = [NSLayoutConstraint constraintWithItem:self.emptyView3
+    NSLayoutConstraint *emptyViewThirdTrailing = [NSLayoutConstraint constraintWithItem:self.emptyView3
+                                                                              attribute:NSLayoutAttributeTrailing
+                                                                              relatedBy:NSLayoutRelationEqual
+                                                                                 toItem:self.view
+                                                                              attribute:NSLayoutAttributeTrailing
+                                                                             multiplier:1.0
+                                                                               constant:0];
+     NSLayoutConstraint *emptyViewThirdBottom = [NSLayoutConstraint constraintWithItem:self.emptyView3
                                                                              attribute:NSLayoutAttributeBottom
                                                                              relatedBy:NSLayoutRelationEqual
-                                                                                toItem:self.view
+                                                                                toItem:self.emptyView1
                                                                              attribute:NSLayoutAttributeBottom
                                                                             multiplier:1.0
                                                                               constant:0];
@@ -182,6 +189,7 @@
                                                                            multiplier:1.0
                                                                              constant:0];
     [self.view addConstraints:@[emptyViewThirdleading,
+                                emptyViewThirdTrailing,
                                 emptyViewThirdBottom,
                                 emptyViewThirdHeigt,
                                 emptyViewThirdWidth]];
