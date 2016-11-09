@@ -27,7 +27,6 @@
     self.userPhoto.layer.borderWidth = 3.0f;
     self.userPhoto.layer.borderColor = [UIColor orangeColor].CGColor;
     self.bottomConstant = self.bottomConstraint.constant;
-    self.textField.delegate = self;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
@@ -58,11 +57,6 @@
     [super didReceiveMemoryWarning];
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [self.textField resignFirstResponder];
-    return YES;
-}
-
 - (void)keyboardWasShown:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     CGSize kbSize = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
@@ -76,6 +70,7 @@
 -(void)dismissKeyboard {
     [self.textField resignFirstResponder];
 }
+
 /*
 #pragma mark - Navigation
 
